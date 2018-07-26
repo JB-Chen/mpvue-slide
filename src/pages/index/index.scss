@@ -1,4 +1,8 @@
 // 头部
+*{
+    margin:0px;
+    padding: 0px;
+}
 .head {
     width: 100%;
     height:130rpx;
@@ -46,9 +50,14 @@
   .infoAll{
      width: 100%;
      margin-top:15rpx;
+
       ul{
+        width: 100%;
+        // overflow-x: scroll;
           li{
-              width: 120%;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+              width: 1100rpx;
               height: 150rpx; 
             //   background-color: red;
               line-height: 150rpx;
@@ -73,27 +82,20 @@
                 
               }
               .centerInfo{
-                width: 50%;
-                height: 90rpx;
-              
+                width: 40%;
+                height: 150rpx;
                 margin-left: 2%;
                 .name{
-                    display: inline;
-                   
+                    margin-top:-20rpx;
                     span{
                         font-size: 35rpx;
-                        margin-top:-50rpx;
-                        position: absolute;
-                        
                     }
                    
                 }
                 .sonName{
-                   
+                    margin-top:-110rpx;
                     span{
-                        margin-top:-10rpx;
                         font-size: 24rpx;
-                        position: absolute;
                         color: #7C8489;
                     }
                 
@@ -102,26 +104,52 @@
               }
               .timeInfo{
                 width: 15%;
-                height: 100rpx;
-             
-                span{
-                    position: absolute;
-                }
+                height: 150rpx;
+                margin-left: 6%;
+                // background-color: red;
                 .time{
-                    margin-top:-50rpx;
+                    margin-top:-20rpx;
                     color: #92A0A1;
                     font-size: 25rpx;
+                    position: absolute;
+                    
                 }
                 .infoNum{
+                    width:50rpx;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
                     height: 30rpx;
                     border-radius: 10rpx;
                     background-color: #93D5ED;
-                    // position: absolute;
-                    margin-top: 50rpx;
+                    margin-left: 10rpx;
+                    margin-top: 70rpx;
+
                 }
                  
+              }
+              .top{
+                  width: 15%;
+                  height: 150rpx;
+                  background-color: #C4C7CD;
+                  color: #fff;
+                  font-size: 34rpx;
+                  text-align:center
+              }
+              .delect{
+                width: 15%;
+                height: 150rpx;
+                background-color: #FF3B32;
+                color: #fff;
+                font-size: 34rpx;
+                text-align:center
               }
           }
       }
   }
-  
+li[data-type="0"]{
+    transform: translate3d(0,0,0);
+}
+li[data-type="1"]{
+    transform: translate3d(-400rpx,0,0);
+}
