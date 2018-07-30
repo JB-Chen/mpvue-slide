@@ -1,21 +1,22 @@
 # mpvue-slide
 
-> A like QQ Slide app
 
-## Build Setup
+微信小程序，mpvue仿QQ左滑，置顶和删除的组件
 
-``` bash
-# install dependencies
+##不废话，直接看效果，如果满足你的开发需要，就接着往下看
+![](https://i.imgur.com/mDUiePZ.gif)
+
+##建立步骤
+
+git clone 代码到本地后
+
 npm install
 
-# serve with hot reload at localhost:8080
+npm install sass-loader node-sass --save
+
 npm run dev
 
-# build for production with minification
-npm run build
+###代码里面每个函数都有注释，思路都很清楚，技术栈是vue+css+sass。如果觉得可以就给个星把！如果不懂可以加我微信询问：CJB_haibei
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
