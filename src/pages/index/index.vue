@@ -2,7 +2,7 @@
   <div class="container">
     <!-- 头部 -->
     <div class="head">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
+      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover"/>
       <span class="head-info">消息</span>
     </div>
     <!-- 搜索 -->
@@ -12,8 +12,36 @@
     </div>
     <!-- 内容 -->
     <div class="infoAll" v-for="(item,index) in commitInfo" :key="index">
+      <ul v-if="item.top">
+        <li @touchstart="touchStart($event)" @touchend="touchEnd($event,index)" :data-type="item.type" style="background-color:#EDFBFE;">
+          <div class="imgInfo" @click="recover(index)">
+            <img :src="item.img">
+          </div>
+          <div class="centerInfo">
+            <div class="name">
+               <span>{{item.name}}</span>
+            </div>
+            <div class="sonName">
+              <span>{{item.sonName}}</span>
+              </div>
+          </div>
+          <div class="timeInfo" @click="recover(index)">
+            <div class="time">
+              <text>{{item.time}}</text>
+            </div>
+            <div class="infoNum" style="">
+                <text style="font-size:12px;">{{item.infoNum}}</text>  
+            </div>
+          </div>
+          <div class="top" @click="top(index)" style="width:30%">
+            取消置顶
+          </div>
+        </li>  
+      </ul>
+    </div>
+    <div class="infoAll" v-for="(item,index) in commitInfo" :key="index">
       <!-- {{item.img}} -->
-      <ul>
+      <ul v-if="!item.top">
         <li @touchstart="touchStart($event)" @touchend="touchEnd($event,index)" :data-type="item.type">
           <div class="imgInfo" @click="recover(index)">
             <img :src="item.img">
@@ -34,14 +62,13 @@
                 <text style="font-size:12px;">{{item.infoNum}}</text>  
             </div>
           </div>
-          <div class="top">
+          <div class="top" @click="top(index)">
             置顶
           </div>
-          <div class="delect">
+          <div class="delect" @click="delect(index)">
             删除
           </div>
-        </li>
-        
+        </li>  
       </ul>
     </div>
   </div>
@@ -147,6 +174,15 @@ export default {
           })
         }
       })
+    },
+    // 置顶
+    top(index){
+      this.commitInfo[index].top = !this.commitInfo[index].top;
+      this. recover(index);
+    },
+    // 删除
+    delect(index){
+      this.commitInfo.splice(index,1);
     }
   },
 
