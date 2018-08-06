@@ -1,3 +1,4 @@
+
 {
 	"description": "项目配置文件。",
 	"setting": {
@@ -9,7 +10,7 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
+	"appid": "wx2a072a9392a9a6b3",
 	"projectname": "mpvue-slide",
 	"condition": {
 		"search": {

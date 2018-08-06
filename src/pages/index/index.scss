@@ -52,8 +52,10 @@
      width: 100%;
       ul{
         width: 100%;
+        overflow: hidden;
         // overflow-x: scroll;
           li{
+            // overflow: hidden;
             -webkit-transition: all 0.2s;
             transition: all 0.2s;
               width: 1100rpx;
