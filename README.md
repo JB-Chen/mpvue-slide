@@ -8,13 +8,13 @@
 
 ##建立步骤
 
-  git clone 代码到本地后
+  `git clone 代码到本地后`
 
-  npm install
+   `npm install`
 
-  npm install sass-loader node-sass --save
+  `npm install sass-loader node-sass --save`
 
-  npm run dev
+  `npm run dev`
 
 ###代码里面每个函数都有注释，思路都很清楚，技术栈是vue+css+sass。如果觉得可以就给个星把！
 
